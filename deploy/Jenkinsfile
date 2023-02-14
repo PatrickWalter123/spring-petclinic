@@ -1,7 +1,12 @@
 pipeline {
   
   agent any
-    
+  
+  tools {
+    maven 'M3'
+    jdk 'JDK'
+  }
+  
   stages {
     
     stage('Git_fatch') {
@@ -26,6 +31,7 @@ pipeline {
       
       steps {
         echo 'Maven Build'
+        sh 'mvn -Dmaven.test.failure.ignore-true clean package'
       }
       
     }
