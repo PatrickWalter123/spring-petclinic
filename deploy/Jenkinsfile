@@ -7,7 +7,49 @@ pipeline {
     stage('Echo Hello') {
       
       steps {
-       echo 'hello world' 
+       echo 'Git_fatch'
+        git url: 'https://github.com/PatrickWalter123/spring-petclinic.git',
+          branch: main, condentialld: 'gitCredential'
+      }
+      
+    }
+    
+    stage('Echo Hello') {
+      
+      steps {
+       echo 'Hello World' 
+      }
+      
+    }
+    
+    stage('Maven Build') {
+      
+      steps {
+        echo 'Maven Build'
+      }
+      
+    }
+    
+    stage('Docker Image') {
+      
+      steps {
+        echo 'Docker Image'
+      }
+      
+    }
+    
+    stage('Image Push') {
+      
+      steps {
+        echo 'Image push'
+      }
+      
+    }
+    
+    stage('Codedeploy workload') {
+      
+      steps {
+        echo 'Codedeploy workload'
       }
       
     }
