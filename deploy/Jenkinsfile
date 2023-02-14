@@ -4,11 +4,11 @@ pipeline {
     
   stages {
     
-    stage('Echo Hello') {
+    stage('Git_fatch') {
       
       steps {
        echo 'Git_fatch'
-        git url: 'https://github.com/PatrickWalter123/spring-petclinic.git',
+       git url: 'https://github.com/PatrickWalter123/spring-petclinic.git',
           branch: 'main', condentialsId: 'gitCredential'
       }
       
