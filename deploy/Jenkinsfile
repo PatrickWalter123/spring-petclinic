@@ -41,7 +41,7 @@ pipeline {
       steps {
         echo 'Docker Image'
         dir("${env.WORKSPACE}") {
-         sh 'docker build -t aws16-spring-petclinic:1.0' 
+         sh 'docker build -t aws16-spring-petclinic:1.0 .' 
         }
       }
       
